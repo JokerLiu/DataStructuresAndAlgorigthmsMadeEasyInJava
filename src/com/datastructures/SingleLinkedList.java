@@ -3,7 +3,7 @@ package com.datastructures;
 /**
  * 单链表
  *
- * @package com.demo.recursion
+ * @package com.datastructures
  * @auther joker
  * @date 2018/4/26 19:11
  */
