@@ -13,7 +13,7 @@ public class Recursion {
      * @param var
      * @return
      */
-    static int factorialNumber(int var) {
+    public static int factorialNumber(int var) {
         if (1 == var) return 1;
         else if (0 == var) return 1;
         else return var * factorialNumber(var - 1);
@@ -24,7 +24,7 @@ public class Recursion {
      * @param var
      * @return
      */
-    static int factorialNumberUseFor(int var) {
+    public static int factorialNumberUseFor(int var) {
         int result = 1;
         for (int i = 1; i <= 5; i++) {
             result = result * i;
@@ -32,7 +32,7 @@ public class Recursion {
         return result;
     }
 
-    static int printFactorial(int var) {
+    public static int printFactorial(int var) {
         if (0 == var) return 0;
         System.out.println(var);
         return printFactorial(var - 1);
@@ -46,7 +46,7 @@ public class Recursion {
      * @param target B 目标位置
      * @param temp   C 辅助位置
      */
-    static void towersOfHanoi(int n, char begin, char target, char temp) {
+    public static void towersOfHanoi(int n, char begin, char target, char temp) {
         if (0 == n) {
             //System.out.println("只有一个圆盘，直接移动");
             return;
@@ -63,20 +63,12 @@ public class Recursion {
      * @param index 数组长度
      * @return
      */
-    static boolean isArrayIsSort(int[] arr, int index) {
+    public static boolean isArrayIsSort(int[] arr, int index) {
         if (arr.length == 1) return true;
         if (index == 2) {
             return arr[index - 1] >= arr[index - 2];
         }
         return arr[index - 1] >= arr[index - 2] && isArrayIsSort(arr, index - 1);
 //        return arr[index - 1] < arr[index - 2] ? false : isArrayIsSort(arr, index - 1);
-    }
-
-    public static void main(String[] args) {
-//        System.out.println(factorialNumber(5));
-//        printFactorial(10);
-//        towersOfHanoi(3, 'A', 'B', 'C');
-        int[] arr = {1, 2, 3, 1, 4, 5};
-        System.out.println(isArrayIsSort(arr, arr.length));
     }
 }

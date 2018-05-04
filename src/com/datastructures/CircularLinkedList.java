@@ -27,7 +27,7 @@ public class CircularLinkedList {
         this.next = next;
     }
 
-    int getCLLLength(CircularLinkedList cll) {
+    public int getCLLLength(CircularLinkedList cll) {
         int length = 0;
         CircularLinkedList currentNode = cll;
         while (currentNode != null) {
@@ -41,17 +41,4 @@ public class CircularLinkedList {
         return length;
     }
 
-    public static void main(String[] args) {
-        CircularLinkedList cll1 = new CircularLinkedList();
-        CircularLinkedList cll2 = new CircularLinkedList();
-        CircularLinkedList cll3 = new CircularLinkedList();
-        CircularLinkedList cll4 = new CircularLinkedList();
-
-        cll1.setNext(cll4);
-//        cll2.setNext(cll3);
-//        cll3.setNext(cll4);
-        cll4.setNext(cll1);
-
-        System.out.println(cll1.getCLLLength(cll1));
-    }
 }

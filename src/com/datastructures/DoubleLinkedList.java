@@ -70,20 +70,4 @@ public class DoubleLinkedList {
         return length;
     }
 
-    public static void main(String[] args) {
-        DoubleLinkedList dll1 = new DoubleLinkedList();
-        DoubleLinkedList dll2 = new DoubleLinkedList();
-        DoubleLinkedList dll3 = new DoubleLinkedList();
-        DoubleLinkedList dll4 = new DoubleLinkedList();
-
-        dll1.setNext(dll2);
-        dll2.setPrevious(dll1);
-//        dll2.setNext(dll3);
-//        dll3.setPrevious(dll2);
-//        dll3.setNext(dll4);
-//        dll4.setPrevious(dll3);
-
-        System.out.println(new DoubleLinkedList().getLength(dll2));
-
-    }
 }

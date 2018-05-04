@@ -18,19 +18,19 @@ public class SingleLinkedList {
         this.data = data;
     }
 
-    private int getData() {
+    public int getData() {
         return data;
     }
 
-    private void setData(int data) {
+    public void setData(int data) {
         this.data = data;
     }
 
-    private SingleLinkedList getNext() {
+    public SingleLinkedList getNext() {
         return next;
     }
 
-    private void setNext(SingleLinkedList next) {
+    public void setNext(SingleLinkedList next) {
         this.next = next;
     }
 
@@ -40,7 +40,7 @@ public class SingleLinkedList {
      * @param ll
      * @return
      */
-    static int listLength(SingleLinkedList ll) {
+    public static int listLength(SingleLinkedList ll) {
         int length = 0;
         SingleLinkedList currentNode = ll;
         while (currentNode != null) {
@@ -58,7 +58,7 @@ public class SingleLinkedList {
      * @param position     插入的位置
      * @return
      */
-    static SingleLinkedList add(SingleLinkedList headNode, SingleLinkedList nodeToInsert, int position) {
+    public static SingleLinkedList add(SingleLinkedList headNode, SingleLinkedList nodeToInsert, int position) {
         if (headNode == null)//插入目标链表为空
             return nodeToInsert;
         int size = listLength(headNode);//获取目标链表对象的长度
@@ -91,7 +91,7 @@ public class SingleLinkedList {
      * @param position 指定位置
      * @return
      */
-    static SingleLinkedList remove(SingleLinkedList headNode, int position) {
+    public static SingleLinkedList remove(SingleLinkedList headNode, int position) {
         int size = listLength(headNode);//获取目标链表对象的长度
         if (position > size + 1 || position < 1) {
             System.out.println("位置不存在，这个校验输入，合法为位置为：" + (size + 1));
@@ -117,11 +117,4 @@ public class SingleLinkedList {
         return headNode;
     }
 
-    public static void main(String[] args) {
-        SingleLinkedList l1 = new SingleLinkedList();
-        SingleLinkedList ll = new SingleLinkedList();
-        ll.setNext(l1);
-        System.out.println(listLength(ll));
-//        remove(l1, 2);
-    }
 }
