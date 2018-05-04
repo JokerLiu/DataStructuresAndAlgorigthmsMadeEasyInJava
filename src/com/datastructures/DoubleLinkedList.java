@@ -65,7 +65,6 @@ public class DoubleLinkedList {
                     }
                 }
             }
-
         }
 
         return length;
